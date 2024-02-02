@@ -3,7 +3,6 @@ from .models import TodoItem
 
 # Create your views here.
 def home(request):
-    # return HttpResponse("Hello World!")
     return render(request, "home.html")
 
 def about(request):
