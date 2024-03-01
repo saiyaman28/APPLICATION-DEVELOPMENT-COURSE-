@@ -1,0 +1,46 @@
+body{
+    font-family: century gothic;
+    font-size: 13px;
+}
+li{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.No-Border{
+    border: none;
+}
+.Align-Center{
+    align-items: center;
+}
+.Cursor-Pointer{
+    cursor: pointer;
+}
+.Mod-Navbar{
+    background-color: #F08000;
+}
+.Mod-Navbar-2{
+    top: 10px;
+}
+.Mod-Search-div{
+    background-color: aquamarine; 
+    height: 40px;
+    width: 500px;
+    border-radius: 6px;
+}
+.Mod-Search-input{
+    background: none; 
+    height: 100%; 
+    width: 57%; 
+    padding-left: 13px;
+}
+.Mod-Search-button{
+    background-color: #60D3A3;
+    margin-top: -2px;
+}
+.Mod-Login-Modal{
+    margin-top: 50px;
+}
+.Mod-Login-Input{
+    margin-top: 23px;
+}

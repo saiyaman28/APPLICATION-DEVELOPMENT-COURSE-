@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecooo</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modifies.css' %}">
+</head>
+{% if user.is_authenticated %}
+<body style="background-image: url('static/assets/US.jpg'); background-size: 100%; background-repeat: no-repeat;">
+{% else %}
+<body style="background-image: url('static/assets/PH.jpeg'); background-size: 100%; background-repeat: no-repeat;">
+{% endif %}
+    {% include '.NAV.html' %}
+    {% block content %}
+
+
+    {% endblock %}
+
+
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>
