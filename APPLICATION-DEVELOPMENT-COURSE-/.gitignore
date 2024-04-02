@@ -1,0 +1,5 @@
+.VENV
+TAGPRISE/SETUP/__pycache__
+TAGPRISE/WEB/__pycache__
+TAGPRISE/WEB/migrations/__pycache__
+TAGPRISE/.var

@@ -1,0 +1,212 @@
+{% load static %}
+<header class="MOD-header fixed-top w-100">
+
+<div class="MOD-Primary-Color-bg container-fluid mx-auto">
+
+    <div class="MOD-header-1st-2 mx-auto d-flex justify-content-between">
+        <div class="MOD-header-logo">
+            <a href="{% url 'home' %}"><img class="MOD-header-logo-img pe-none user-select-none" src="{% static 'assets/TAGPRISE LOGO.png' %}" draggable="false"></a>
+        </div>
+        
+        <div class="MOD-header-searchbar d-flex flex-nowrap flex-row">
+            <form class="input-group" role="search">
+                <input class="MOD-input form-control" placeholder="🔍 search website" type="search" id="">
+                <button class="MOD-Secondary-Color-bg MOD-button btn" type="submit">SEARCH</button>
+            </form>
+        </div>
+
+        <div class="MOD-header-signin d-flex flex-row-reverse">
+            {% if user.is_authenticated %}
+                <button class="MOD-Secondary-Color-bg MOD-button btn text-uppercase text-truncate" type="button" data-bs-toggle="offcanvas" data-bs-target="#AccountOffcanvas">HI, {{ authenticated_user.first_name }}</button>
+            {% else %}
+                <button class="MOD-Secondary-Color-bg MOD-button btn text-uppercase text-truncate" type="button" data-bs-toggle="offcanvas" data-bs-target="#LoginOffcanvas">HI, SIGN-IN HERE</button>
+            {% endif %}
+        </div>
+        
+    </div>
+</div>
+
+<div class="MOD-Secondary-Color-bg container-fluid mx-auto">
+
+    <div class="MOD-header-2nd-2 mx-auto">
+        <div class="MOD-header-links-ul d-flex flex-nowrap flex-row user-select-none">
+            <a class="MOD-header-links-a nav-link" data-bs-toggle="offcanvas" data-bs-target="#CategoryOffcanvas">CATEGORY</a>
+            <a class="MOD-header-links-a nav-link">BEST SELLERS</a>
+            <a class="MOD-header-links-a nav-link">NEW RELEASES</a>
+            <a class="MOD-header-links-a nav-link">TODAY'S OFFER</a>
+            <a class="MOD-header-links-a nav-link">GIFT CARD</a>
+            <a class="MOD-header-links-a nav-link">VOUCHERS</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="MOD-Secondary-Color-bg offcanvas offcanvas-start" data-bs-scroll="true" id="CategoryOffcanvas" style="width: 333px;">
+    <div class="MOD-offcanva-title offcanvas-header d-flex align-items-center">
+        <span class="MOD-offcanva-title-span">CATEGORY</span>
+    </div>
+    <div class="offcanvas-body px-0">
+        <div class="MOD-offcanva-links-ul p-0 d-flex flex-column user-select-none text-uppercase">
+            <a class="MOD-offcanva-links-a nav-link" data-bs-toggle="collapse" href="#ApparelCollapse">Apparel</a>
+            <div class="collapse" id="ApparelCollapse">
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#ClothingCollapse">Clothing</a>
+                <div class="collapse" id="ClothingCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Shirts</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">T-Shirts</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Polos</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Outerwear</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Dress</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Pants</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Jeans</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Innerwear</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Socks</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#ShoesCollapse">Shoes</a>
+                <div class="collapse" id="ShoesCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Oxfords</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Sneakers</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Rubber Shoes</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Boat Shoes</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Boots</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Sandals</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Heels</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#AccessoriesCollapse">Accessories</a>
+                <div class="collapse" id="AccessoriesCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Heargear</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Eyewear</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Watches</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Belt</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Scarf</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Bag</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Wallet</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Handkerchief</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Jewelry</a>
+                </div>
+            </div>
+            <a class="MOD-offcanva-links-a nav-link" data-bs-toggle="collapse" href="#ComputerCollapse">Computer</a>
+            <div class="collapse" id="ComputerCollapse">
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#PeripheralCollapse">Peripheral</a>
+                <div class="collapse" id="PeripheralCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Mouse</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Keyboard</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Monitor</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Printer</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Joystick</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Webcam</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Pen Drive</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">CD</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Dongle</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#InternalCollapse">Internal</a>
+                <div class="collapse" id="InternalCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Hard Drive</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">CPU</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">GPU</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">RAM</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Motherboard</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#CablesCollapse">Cables</a>
+                <div class="collapse" id="CablesCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">HDMI</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">SATA</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">VGA</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">DVI</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Fibre Optic</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Audio</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Other</a>
+                </div>
+            </div>
+            <a class="MOD-offcanva-links-a nav-link" data-bs-toggle="collapse" href="#CosmeticsCollapse">Cosmetics</a>
+            <div class="collapse" id="CosmeticsCollapse">
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#HairCollapse">Hair</a>
+                <div class="collapse" id="HairCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Shampoo</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Conditioner</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Hair Gel / Wax</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Hair Straigner</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Hair Spray</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Hair Color</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#FaceCollapse">Face</a>
+                <div class="collapse" id="FaceCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Facial Soap</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Face Wash</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Face Cream</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Toner</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Mosturizer</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Cleanser</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Exfoliator</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Serum</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Face Mask</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Eye Cream</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#BodyCollapse">Body</a>
+                <div class="collapse" id="BodyCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Body Soap</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Body Wash</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Body Cream</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Lotion</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Body Oil</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Deodorant</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Hand Wash</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Collagen</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Fragrance</a>
+                </div>
+                <a class="MOD-offcanva-links-a links-a-1 nav-link" data-bs-toggle="collapse" href="#MakeupCollapse">Makeup</a>
+                <div class="collapse" id="MakeupCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Primer</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Foundation</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Concealer</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Powder</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Blush</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Brow</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Eye Liner</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Mascara</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Eye Shadow</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Lipstick</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Lipgloss</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Setting Spray</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Nail Polish</a>
+                </div>
+            </div>
+            <a class="MOD-offcanva-links-a nav-link">Utensils</a>
+            <a class="MOD-offcanva-links-a nav-link">Music</a>
+        </div>
+        
+    </div>
+</div>
+
+{% if user.is_authenticated %}
+    <div class="MOD-Secondary-Color-bg offcanvas offcanvas-end" data-bs-scroll="true" id="AccountOffcanvas" style="width: 333px;">
+        <div class="MOD-offcanva-title offcanvas-header d-flex flex-wrap align-items-center">
+            <span class="MOD-offcanva-title-useraunthen-span text-uppercase user-select-none">{{ authenticated_user.first_name }} {{ authenticated_user.last_name }}<br>
+            <span class="username-span text-lowercase">@{{ authenticated_user.username }}</span></span>
+        </div>
+        <div class="offcanvas-body px-0">
+            <div class="MOD-offcanva-links-ul p-0 d-flex flex-column user-select-none text-uppercase">
+                <a class="MOD-offcanva-links-a nav-link" data-bs-toggle="collapse" href="#AccountCollapse">Account</a>
+                <div class="collapse" id="AccountCollapse">
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Change Password</a>
+                    <a class="MOD-offcanva-links-a links-a-2 nav-link">Deactivate Account</a>
+                </div>
+                <a class="MOD-offcanva-links-a nav-link" href="">Cart</a>
+                <a class="MOD-offcanva-links-a nav-link" href="">Messages</a>
+                <a class="MOD-offcanva-links-a nav-link" href="">Settings</a>
+                <a class="MOD-offcanva-links-a nav-link" href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="MOD-Secondary-Color-bg offcanvas offcanvas-end" data-bs-scroll="true" id="LoginOffcanvas" style="width: 333px;">
+        <div class="MOD-offcanva-title offcanvas-header d-flex align-items-center">
+            <span class="MOD-offcanva-title-span">SIGN-IN</span>
+        </div>
+        <div class="offcanvas-body px-0">
+            {% include '.LOGIN.html' %}
+        </div>
+    </div>
+{% endif %}
+
+</header>

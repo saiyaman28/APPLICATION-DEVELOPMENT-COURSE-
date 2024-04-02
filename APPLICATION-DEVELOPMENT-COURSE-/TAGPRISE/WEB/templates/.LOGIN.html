@@ -1,0 +1,17 @@
+{% load static %}
+<div class="w-100 d-flex">
+    <div class="MOD-offcanva-login mx-auto d-flex flex-column">
+        <form action="{% url 'login' %}" class="MOD-offcanva-login-form d-flex flex-column" method="post">
+            {% csrf_token %}
+            <div class="MOD-offcanva-login-form-input d-flex flex-column">
+                <input class="MOD-input MOD-offcanva-login-form-input-2 form-control" placeholder="Username" type="username" name="username">
+                <input class="MOD-input MOD-offcanva-login-form-input-2 form-control" placeholder="Password" type="password" name="password">
+            </div>
+            <div class="d-flex flex-column">
+                <button class="MOD-Secondary-Color-bg MOD-button MOD-offcanva-login-form-button" type="submit">SIGN-IN</button>
+            </div>
+        </form>
+        <form action="{% url 'register' %}"><button class="MOD-Secondary-Color-bg MOD-button MOD-offcanva-login-form-button w-100" type="butston">REGISTER</button></form>
+        <button class="MOD-Secondary-Color-bg MOD-button MOD-offcanva-login-form-button" type="submit">FORGET PASSWORD</button>
+    </div>
+</div>
