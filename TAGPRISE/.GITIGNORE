@@ -1,0 +1,5 @@
+.VENV
+SETUP/__pycache__
+WEB/__pycache__
+WEB/migrations/__pycache__
+.var
